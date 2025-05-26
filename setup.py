@@ -639,6 +639,7 @@ def get_requirements() -> list[str]:
         raise ValueError(
             "Unsupported platform, please use CUDA, ROCm, Neuron, HPU, "
             "or CPU.")
+    requirements.append("hypercorn")
     return requirements
 
 

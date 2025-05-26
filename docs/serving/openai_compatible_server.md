@@ -169,6 +169,10 @@ completion = client.completions.create(
 print(completion._request_id)
 ```
 
+### HTTP/2.0 Support
+
+The server now utilizes Hypercorn as its ASGI server, which enables support for the HTTP/2.0 protocol. Clients that support and request HTTP/2.0 (typically over a secure HTTPS connection) can take advantage of its performance benefits, such as request multiplexing and header compression. No specific server-side flags are required to enable HTTP/2.0 beyond standard SSL configuration for HTTPS.
+
 ## API Reference
 
 [](){ #completions-api }
